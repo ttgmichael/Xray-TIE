@@ -5,7 +5,7 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LocalDebuggerCommandArguments>C:\imagebatch C:\outputbatch xray_tie_input_ 0 5 32768.0 1.0 30 0.02828 0.0000001 .00325 0.0025 1</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>$(SolutionDir)Release\input $(SolutionDir)Release\output xray_tie_input_ 0 5 32768.0 1.0 30 0.02828 0.0000001 .00325 0.0025 1</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>
