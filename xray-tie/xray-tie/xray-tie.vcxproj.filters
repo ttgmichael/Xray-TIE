@@ -15,31 +15,19 @@
     <ClInclude Include="toolbox.h">
       <Filter>Headers</Filter>
     </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="fourier_tools.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="pointwise_matrix_ops.h">
       <Filter>Headers</Filter>
     </ClInclude>
-=======
-  </ItemGroup>
-  <ItemGroup>
-    <CudaCompile Include="main.cpp" />
->>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tiff_io-win.cpp">
       <Filter>src</Filter>
     </ClCompile>
-<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="main.cu" />
-=======
-    <ClCompile Include="toolbox.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
->>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
   </ItemGroup>
 </Project>

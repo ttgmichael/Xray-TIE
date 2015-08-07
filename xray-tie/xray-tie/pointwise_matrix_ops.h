@@ -8,13 +8,8 @@
 #include "device_launch_parameters.h"
 #include "toolbox.h"
 
-<<<<<<< HEAD
 #define BLOCKSIZEX_POINTWISE 32
 #define BLOCKSIZEY_POINTWISE 32
-=======
-#define BLOCKSIZEX_POINTWISE 16
-#define BLOCKSIZEY_POINTWISE 16
->>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 
 /* device function declarations */
 
