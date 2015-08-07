@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+<<<<<<< HEAD
     <LocalDebuggerCommandArguments>C:\imagebatch C:\outputbatch xray_tie_input_ 0 5 1.0 1.0 25 0.0705 0.000001 .00325 0.00001 1</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LocalDebuggerCommandArguments>C:\imagebatch C:\outputbatch xray_tie_input_ 0 5 32768.0 1.0 30 0.02828 0.0000001 .00325 0.0025 1</LocalDebuggerCommandArguments>
+=======
+    <LocalDebuggerCommandArguments>C:\Users\Diivanand\git\Xray-TIE\xray-tie\Debug\norm C:\Users\Diivanand\git\Xray-TIE\xray-tie\Debug\output 20131116_192634_GWSS_D5_Healthy_ 0 2 1.0 2.0 30 0.00828 0.0001 .00325 0.1</LocalDebuggerCommandArguments>
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

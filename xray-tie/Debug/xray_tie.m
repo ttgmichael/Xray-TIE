@@ -27,7 +27,11 @@ Fy = transpose(Fy);
 I2fft = fftshift(fft2(Mag^2 * I2));
 I2fftScaled = (I2fft / IinVal) * mu;
 denominator = (R2 * delta) * ((Fx.^2 + Fy.^2) / Mag) + mu + reg;
+<<<<<<< HEAD
 mu
+=======
+
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 %I could have done this all at once but I split it up to
 %check the values in the matrix with the CUDA version
 %to see if my cuda kernels were working correctly

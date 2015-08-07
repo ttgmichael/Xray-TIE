@@ -11,6 +11,7 @@ function [projected_thickness] = xray_tie (I2, IinVal, Mag, R2, mu, delta, ps, r
 % ps is pixel size
 % algorithm obtained from Paganin Phase paper
 [M, N] = size(I2);
+<<<<<<< HEAD
 %Proper way of creating frequency axis
 wx =2*pi*(0:(M-1))/M; %Create unshifted default omega axis
 wy =2*pi*(0:(N-1))/N; %Create unshifted default omega axis
@@ -19,6 +20,16 @@ wy =2*pi*(0:(N-1))/N; %Create unshifted default omega axis
 fx = 1/ps*(wx-pi*(1-mod(M,2)/M))/(2*pi); %Shift zero to centre - for even case, pull back by pi, for odd case by pi(1-1/N)
 fy = 1/ps*(wy-pi*(1-mod(N,2)/N))/(2*pi); %Shift zero to centre - for even case, pull back by pi, for odd case by pi(1-1/N)
 
+=======
+%M
+%N
+%Proper way of creating frequency axis
+wx =2*pi*(0:(M-1))/M; %Create unshifted default omega axis
+wy =2*pi*(0:(N-1))/N; %Create unshifted default omega axis
+%fx =1/ps*unwrap(fftshift(wx)-2*pi)/2/pi; 
+fx = 1/ps*(wx-pi*(1-mod(M,2)/M))/(2*pi); %Shift zero to centre - for even case, pull back by pi, for odd case by pi(1-1/N)
+fy = 1/ps*(wy-pi*(1-mod(N,2)/N))/(2*pi); %Shift zero to centre - for even case, pull back by pi, for odd case by pi(1-1/N)
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 [Fx,Fy] = meshgrid(fx,fy);
 Fx = transpose(Fx);
 Fy = transpose(Fy);
@@ -35,6 +46,7 @@ invTerm = I2fftScaled ./ denominator;
 outputIFFT = real(ifft2(ifftshift(invTerm)));
 log_output = log(outputIFFT);
 projected_thickness = -(1/mu) * log_output;
+<<<<<<< HEAD
 IinVal
 Mag
 R2
@@ -43,4 +55,6 @@ delta
 ps
 reg
 
+=======
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 end

@@ -12,8 +12,13 @@
 #include <cufft.h>
 #include <vector>
 
+<<<<<<< HEAD
 #define BLOCKSIZEX_TOOLBOX 64 //unused//
 #define BLOCKSIZEY_TOOLBOX 64 //unused//
+=======
+#define BLOCKSIZEX_TOOLBOX 16
+#define BLOCKSIZEY_TOOLBOX 16
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 
 using namespace std;
 
@@ -70,11 +75,19 @@ __global__ void complex2real_scaled(cufftComplex *c, float *a, int Nx, int Ny,fl
 } 
 
 __global__ void genIntSequence(float *seq, int start, int end){
+<<<<<<< HEAD
 	int i = blockIdx.x*blockDim.x+threadIdx.x+threadIdx.x;
 	if(i < (end-start+1)){
 		seq[i] = start + i;
 	}
 	else seq[i] = start + 1;
+=======
+	int i = threadIdx.x;
+	if(i < (end-start+1)){
+		seq[i] = start + i;
+	}
+    
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 }
 
 /* host functions */
@@ -132,17 +145,28 @@ float* linspace(float a, float b, int n) {
     return output;
 }
 
+<<<<<<< HEAD
 float* toFloatArray(float* image_rows, int width, int height)
+=======
+float* toFloatArray(float** image_rows, int width, int height)
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 {
 	float* output = (float *) calloc(width*height, sizeof(float));
 	float* buffer = (float *) calloc(width, sizeof(float));
 	for(int i = 0; i < height; i++){
+<<<<<<< HEAD
 //		memcpy(buffer, image_rows[i], width*sizeof(float));
+=======
+		memcpy(buffer, image_rows[i], width*sizeof(float));
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 		for(int j = 0; j < width; j++){
 			output[j+(i*width)] = buffer[j]; 
 		}
 	}
+<<<<<<< HEAD
 	free(buffer);
+=======
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 	return output;
 }
 
@@ -158,8 +182,13 @@ float** toFloat2D(float *image, int width, int height){
 /* Height is the number of rows (x) and Width is the number of columns (y)*/
 void printMatrix1D(char *matrixName, float *matrix, int height, int width){
 	printf("\n%s=\n", matrixName);
+<<<<<<< HEAD
 	for(int row = 0; row < height; row+=256) {
 		for (int col = 0; col < width; col+=256) {
+=======
+	for(int row = 0; row < height; row++) {
+		for (int col = 0; col < width; col++) {
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 			printf("%f\t", matrix[row*width + col]);
 		}
 		printf("\n");
@@ -178,8 +207,13 @@ void printMatrix2D(char *matrixName, float **matrix, int height, int width){
 
 void printComplexMatrix1D(char *matrixName, cufftComplex *matrix, int height, int width){
 	printf("\n%s=\n", matrixName);
+<<<<<<< HEAD
 	for(int row = 0; row < height; row+=256) {
 		for (int col = 0; col < width; col+=256) {
+=======
+	for(int row = 0; row < height; row++) {
+		for (int col = 0; col < width; col++) {
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 			if(matrix[row*width + col].y >= 0){
 				printf("%f+%fi\t", matrix[row*width + col].x, matrix[row*width + col].y);
 			}else {
@@ -213,7 +247,11 @@ void printDeviceMatrixValues(char *name, float *dev_float_ptr, int height, int w
 	//Transfer output device vector to our host output vector and we are done!
 	cudaError_t cudaStatus = cudaMemcpy(host_ptr, dev_float_ptr, size * sizeof(float), cudaMemcpyDeviceToHost);
     if (cudaStatus != cudaSuccess) {
+<<<<<<< HEAD
 		fprintf(stderr, "Failed to print values. cudaMemcpy failed! ErrorCode: %d\n", cudaStatus);  
+=======
+		fprintf(stderr, "Failed to print values. cudaMemcpy failed! ErrorCode: %d", cudaStatus);  
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
     }else{
 		printMatrix1D(name, host_ptr,height, width);
 	}
@@ -229,7 +267,11 @@ void printDeviceComplexMatrixValues(char *name, cufftComplex *dev_cufft_ptr, int
 	//Transfer output device vector to our host output vector and we are done!
 	cudaError_t cudaStatus = cudaMemcpy(host_ptr, dev_cufft_ptr, size * sizeof(cufftComplex), cudaMemcpyDeviceToHost);
     if (cudaStatus != cudaSuccess) {
+<<<<<<< HEAD
         fprintf(stderr, "Failed to print values. cudaMemcpy failed! ErrorCode: %d\n", cudaStatus);
+=======
+        fprintf(stderr, "Failed to print values. cudaMemcpy failed! ErrorCode: %d", cudaStatus);
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
     }else{
 		printComplexMatrix1D(name, host_ptr,height, width);
 	}

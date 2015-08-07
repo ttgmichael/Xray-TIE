@@ -18,7 +18,11 @@ TiffIO::~TiffIO()
 {
 }
 
+<<<<<<< HEAD
 float* TiffIO::readFloatImage(string image_name, int* w_ptr, int* h_ptr)
+=======
+float** TiffIO::readFloatImage(string image_name, int* w_ptr, int* h_ptr)
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 {
 	int width, height;
 
@@ -64,10 +68,17 @@ float* TiffIO::readFloatImage(string image_name, int* w_ptr, int* h_ptr)
 	for (int i=1; i<height; i++) {
 		image_rows[i] = image_rows[i-1] + width;
 	}
+<<<<<<< HEAD
 	return image;
 }
 
 float* TiffIO::read16bitImage(string image_name, int* w_ptr, int* h_ptr)
+=======
+	return image_rows;
+}
+
+float** TiffIO::read16bitImage(string image_name, int* w_ptr, int* h_ptr)
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 {
 	int width, height;
 
@@ -113,7 +124,11 @@ float* TiffIO::read16bitImage(string image_name, int* w_ptr, int* h_ptr)
 	for (int i=1; i<height; i++) {
 		image_rows[i] = image_rows[i-1] + width;
 	}
+<<<<<<< HEAD
 	return image;
+=======
+	return image_rows;
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 }
 
 void TiffIO::writeFloatImage(float** image_rows, string output_name, int width, int height)
@@ -130,21 +145,30 @@ void TiffIO::writeFloatImage(float** image_rows, string output_name, int width, 
 	if(!tif){
 		return;
 	}
+<<<<<<< HEAD
 	TIFFSetField(tif, TIFFTAG_SUBFILETYPE, 0);
 	TIFFSetField(tif, TIFFTAG_IMAGEWIDTH, width);  
 	TIFFSetField(tif, TIFFTAG_IMAGELENGTH, height);    
 	TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 1);
 	TIFFSetField(tif, TIFFTAG_ROWSPERSTRIP, height);
+=======
+	TIFFSetField(tif, TIFFTAG_IMAGEWIDTH, width);  
+	TIFFSetField(tif, TIFFTAG_IMAGELENGTH, height);    
+	TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 1);
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 	TIFFSetField(tif, TIFFTAG_SAMPLEFORMAT, 3); //floating point = 3
 	TIFFSetField(tif, TIFFTAG_BITSPERSAMPLE, 32);
 	TIFFSetField(tif, TIFFTAG_ORIENTATION, ORIENTATION_TOPLEFT);
 	TIFFSetField(tif, TIFFTAG_PLANARCONFIG, PLANARCONFIG_CONTIG);
 	TIFFSetField(tif, TIFFTAG_PHOTOMETRIC, PHOTOMETRIC_MINISBLACK);
+<<<<<<< HEAD
 	//TIFFSetField(tif, TIFFTAG_SOFTWARE, TIFFTAG_SOFTWARE);
 	//TIFFSetField(tif, TIFFTAG_DATETIME, TIFFTAG_DATETIME);
 	//TIFFSetField(tif, TIFFTAG_HOSTCOMPUTER, TIFFTAG_HOSTCOMPUTER);
 	//TIFFSetField(tif, TIFFTAG_ARTIST, TIFFTAG_ARTIST);
 
+=======
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 	float *tiff_buffer = NULL;
 	tsize_t linebytes =  width*sizeof(float);
 	tiff_buffer =(float *)_TIFFmalloc(linebytes);
@@ -179,6 +203,7 @@ void TiffIO::write16bitImage(float** image_rows, string output_name, int width, 
 	if(!tif){
 		return;
 	}
+<<<<<<< HEAD
 	TIFFSetField(tif, TIFFTAG_SUBFILETYPE, 0);
 	TIFFSetField(tif, TIFFTAG_IMAGEWIDTH, width);  
 	TIFFSetField(tif, TIFFTAG_IMAGELENGTH, height);    
@@ -193,6 +218,16 @@ void TiffIO::write16bitImage(float** image_rows, string output_name, int width, 
 	TIFFSetField(tif, TIFFTAG_DATETIME, TIFFTAG_DATETIME);
 	TIFFSetField(tif, TIFFTAG_HOSTCOMPUTER, TIFFTAG_HOSTCOMPUTER);
 	TIFFSetField(tif, TIFFTAG_ARTIST, TIFFTAG_ARTIST);
+=======
+	TIFFSetField(tif, TIFFTAG_IMAGEWIDTH, width);  
+	TIFFSetField(tif, TIFFTAG_IMAGELENGTH, height);    
+	TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 1);
+	TIFFSetField(tif, TIFFTAG_SAMPLEFORMAT, 1); //floating point = 3, unsigned int = 1
+	TIFFSetField(tif, TIFFTAG_BITSPERSAMPLE, 16);
+	TIFFSetField(tif, TIFFTAG_ORIENTATION, ORIENTATION_TOPLEFT);
+	TIFFSetField(tif, TIFFTAG_PLANARCONFIG, PLANARCONFIG_CONTIG);
+	TIFFSetField(tif, TIFFTAG_PHOTOMETRIC, PHOTOMETRIC_MINISBLACK);
+>>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 	uint16 *tiff_buffer = NULL;
 	tsize_t linebytes =  width*sizeof(uint16);
 	tiff_buffer =(uint16 *)_TIFFmalloc(linebytes);
