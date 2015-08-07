@@ -3,11 +3,7 @@
 %Uncomment one or the other but not both depending on which one
 %you want to see
 %I2 = imread('.\norm\20131116_192634_GWSS_D5_Healthy_0.tif'); %rectangular image
-<<<<<<< HEAD
 I2 = imread('.\input\xray_tie_input_1.tif'); %square power of 2 image
-=======
-I2 = imread('.\input\xray_tie_input_0.tif'); %square power of 2 image
->>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
 
 %remove the glue part (approximately the last 100 rows of the image)
 [rows,cols] = size(I2);
