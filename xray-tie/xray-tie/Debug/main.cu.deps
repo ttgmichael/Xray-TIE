@@ -242,7 +242,6 @@ c:\program files\nvidia gpu computing toolkit\cuda\v6.0\include\host_defines.h
 c:\program files\nvidia gpu computing toolkit\cuda\v6.0\include\vector_functions.h
 c:\program files\nvidia gpu computing toolkit\cuda\v6.0\include\device_launch_parameters.h
 c:\program files\nvidia gpu computing toolkit\cuda\v6.0\include\vector_types.h
-<<<<<<< HEAD
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\ctime
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\cstdio
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h
@@ -322,7 +321,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\errno.h
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\share.h
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\iostream
-c:\xray-tie-master\xray-tie-master\xray-tie\xray-tie\tiff_io-win.h
+c:\users\mttang\git\xray-tie\xray-tie\xray-tie\tiff_io-win.h
 C:\Program Files (x86)\GnuWin32\include\tiff.h
 c:\program files (x86)\gnuwin32\include\tiffconf.h
 C:\Program Files (x86)\GnuWin32\include\tiffio.h
@@ -333,7 +332,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\io.h
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdarg.h
-c:\xray-tie-master\xray-tie-master\xray-tie\xray-tie\toolbox.h
+c:\users\mttang\git\xray-tie\xray-tie\xray-tie\toolbox.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\cuda_runtime.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\cuda.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\device_launch_parameters.h
@@ -343,21 +342,14 @@ C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\math.h
 c:\program files\nvidia gpu computing toolkit\cuda\v6.0\include\vector_types.h
 c:\program files\nvidia gpu computing toolkit\cuda\v6.0\include\driver_types.h
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\vector
-c:\xray-tie-master\xray-tie-master\xray-tie\xray-tie\pointwise_matrix_ops.h
+c:\users\mttang\git\xray-tie\xray-tie\xray-tie\pointwise_matrix_ops.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\cuda_runtime.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\cuda.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\device_launch_parameters.h
-c:\xray-tie-master\xray-tie-master\xray-tie\xray-tie\toolbox.h
-c:\xray-tie-master\xray-tie-master\xray-tie\xray-tie\fourier_tools.h
+c:\users\mttang\git\xray-tie\xray-tie\xray-tie\toolbox.h
+c:\users\mttang\git\xray-tie\xray-tie\xray-tie\fourier_tools.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\cuda_runtime.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\cuda.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\cufft.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\device_launch_parameters.h
-c:\xray-tie-master\xray-tie-master\xray-tie\xray-tie\toolbox.h
-=======
-C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\cuda_runtime.h
-C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include\device_launch_parameters.h
-C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h
-C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\crtdefs.h
-C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\swprintf.inl
->>>>>>> bf31d68f9ba4f08251c11785798d5cf592377dae
+c:\users\mttang\git\xray-tie\xray-tie\xray-tie\toolbox.h
